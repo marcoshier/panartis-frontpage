@@ -413,7 +413,6 @@
 
     let searchBoxAnimation = (reverse) => {
 
-        let tl = gsap.timeline();
         if (triggered == false && reverse == false) {
 
             triggered = true
@@ -425,98 +424,102 @@
             if (parent.contains(child)) {
                 parent.insertBefore(searchBox, child);
 
+
                 Flip.from(state, {
                     duration: 0.55,
-                    ease: "Power4.inOut",
-                    scale: true
+                    ease: "power4.inOut",
+                    scale: true,
+                    onComplete: () => {
+                        minimized = true;
+                        triggered = false;
+
+                    }
                 })
 
-
-                tl.to(searchBox, {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        height: "41px",
-                        marginTop: "0"
-                    }, 0)
-                    .to(".phantom-box", {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        height: "100%",
-                        border: "1px solid #2f2f2f30"
-                    }, 0)
-                    .to(".placeholder", {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        lineHeight: "41px",
-                        fontSize: "18px"
-                    }, 0)
-                    .to(".domain", {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        height: "37px",
-                        margin: "2px 3px !important"
-                    }, 0)
-                    .to(".domain span", {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        lineHeight: "41px"
-                    }, 0)
+                gsap.to(".phantom-box", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    height: "41px",
+                    border: "1px solid #2f2f2f30"
+                }, 0);
+                gsap.to(".placeholder", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    lineHeight: "41px",
+                    fontSize: "18px"
+                }, 0)
+                gsap.to(".domain", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    height: "37px",
+                    margin: "2px 3px !important"
+                }, 0);
+                gsap.to(".filters-btn", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    height: "37px"
+                }, 0);
+                gsap.to(".domain span", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    lineHeight: "41px"
+                }, 0);
             }
         } else if (triggered == false && reverse == true) {
-
             triggered = true
 
-            let state = Flip.getState(searchBox);
 
             let parent = (searchBox.parentNode === contentWrapper ? header : contentWrapper)
             let child = document.getElementById("personal-space-cnt")
 
             if (parent.contains(child)) {
+                let state = Flip.getState(searchBox);
                 parent.insertBefore(searchBox, child);
 
                 Flip.from(state, {
                     duration: 0.55,
-                    ease: "Power4.inOut",
-                    scale: true
+                    ease: "power4.inOut",
+                    scale: false,
+                    onComplete: () => {
+                        minimized = false, triggered = false
+                    }
                 })
 
-                tl.to(searchBox, {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        height: "80px",
-                        marginTop: "40px"
-                    }, 0)
-                    .to(".phantom-box", {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        height: "54px",
-                        border: "1px solid #2f2f2f00"
-                    }, 0)
-                    .to(".placeholder", {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        lineHeight: "54px",
-                        fontSize: "23px"
-                    }, 0)
-                    .to(".domain", {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        height: "46px",
-                        margin: "4px 2px !important"
-                    }, 0)
-                    .to(".domain span", {
-                        duration: 0.75,
-                        ease: "Power4.inOut",
-                        lineHeight: "46px"
-                    }, 0)
+
+                gsap.to(".phantom-box", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    height: "54px",
+                    border: "1px solid #2f2f2f00"
+                }, 0);
+                gsap.to(".placeholder", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    lineHeight: "54px",
+                    fontSize: "23px"
+                }, 0);
+                gsap.to(".domain", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    height: "46px",
+                    margin: "4px 2px !important"
+                }, 0);
+                gsap.to(".filters-btn", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    height: "46px"
+                }, 0);
+                gsap.to(".domain span", {
+                    duration: 0.55,
+                    ease: "power4.inOut",
+                    lineHeight: "46px"
+                }, 0);
             }
 
 
         }
 
 
-
-        triggered = false
 
     }
 
@@ -540,9 +543,9 @@
         document.addEventListener("wheel", (e) => {
 
             e.stopPropagation()
-            if (event.deltaY > 0 && document.body.scrollTop >= 200) {
+            if (document.body.scrollTop >= 200 && minimized == false) {
                 searchBoxAnimation(false);
-            } else if (event.deltaY < 0 && document.body.scrollTop < 200 && document.body.scrollTop >= 0) {
+            } else if (document.body.scrollTop < 200 && document.body.scrollTop >= 0 && minimized == true) {
                 searchBoxAnimation(true);
             }
         });
