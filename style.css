@@ -72,11 +72,18 @@ header,
     margin-left: 7px;
 }
 
+.logoword {
+    height: 28px;
+    margin-left: 12px;
+    margin-bottom: 1px;
+}
+
 .hamburger {
     mix-blend-mode: difference;
     float: right;
     height: 20px;
     margin-right: 17px;
+    margin-top: 1px;
 }
 
 #slogan {
@@ -89,7 +96,7 @@ header,
 }
 
 .slogan-text {
-    max-width: 55%;
+    max-width: 90%;
     font-family: GT Sectra;
     text-align: center;
     font-size: 45px;
@@ -166,6 +173,7 @@ input[type="search"] {
     font-size: 23px;
     line-height: 54px;
     visibility: visible;
+    white-space: nowrap;
     color: #878782;
 }
 
@@ -497,23 +505,60 @@ input:checked+label:after {
 #carousel {
     position: relative;
     height: 80vh;
-    width: 99%;
+    min-width: 99%;
     margin: 0 0.5%;
     min-height: 560px;
     overflow: hidden;
+    display: flex;
+}
+
+.carousel-item {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-basis: 100%;
+    flex-shrink: 0;
 }
 
 .carousel-image {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url("/img/carousel_0.png");
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: center top;
     transform: translate(0, -200px) scale(1.3);
     filter: brightness(0.7);
-    z-index: 1;
+}
+
+.one {
+    background-image: url("/img/carousel_0.png");
+    z-index: 8;
+}
+
+.two {
+    background-image: url("/img/carousel_1.jpg");
+    z-index: 7;
+}
+
+.three {
+    background-image: url("/img/carousel_2.jpg");
+    z-index: 6;
+}
+
+.four {
+    background-image: url("/img/carousel_3.jfif");
+    z-index: 5;
+}
+
+.five {
+    background-image: url("/img/carousel_4.jpg");
+    z-index: 4;
+}
+
+.six {
+    background-image: url("/img/carousel_6.jpg");
+    z-index: 3;
 }
 
 .carousel-text {
@@ -525,7 +570,41 @@ input:checked+label:after {
     height: 100%;
     margin: 0 17.5%;
     text-align: center;
-    z-index: 2;
+    z-index: 12;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    z-index: 300;
+}
+
+.arrow-left {
+    left: 10px;
+    transform: translate3d(0, 0, 0) scale(0.95);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.arrow-left:hover {
+    opacity: 0.9;
+    transform: translate3d(-4px, 0, 0) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.arrow-right {
+    transform: translate3d(0, 0, 0) scale(0.95);
+    opacity: 1;
+    transition: all 0.3s ease;
+    right: 10px;
+}
+
+.arrow-right:hover {
+    opacity: 0.9;
+    transform: translate3d(4px, 0, 0) scale(0.95);
+    transition: all 0.3s ease;
 }
 
 .carousel-text h1 {
@@ -550,7 +629,7 @@ input:checked+label:after {
 
 .object-category {
     position: relative;
-    width: 32vw;
+    width: 98.6%;
     height: 30vw;
     border-radius: 3px;
     background-color: #FCFAF3;
@@ -634,4 +713,50 @@ input:checked+label:after {
 
 .active {
     background-color: green !important;
+}
+
+@media screen and (max-width: 1280px) {
+    #objects-cnt {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 8px;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    #objects-cnt {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 8px;
+    }
+    .object-category {
+        height: 55vh;
+    }
+    .slogan-text,
+    .carousel-text h1 {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .slogan-text,
+    .carousel-text h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .inner-wrapper {
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .logoword {
+        display: none;
+    }
+    .slogan-text,
+    .carousel-text h1 {
+        font-size: 19px;
+    }
 }

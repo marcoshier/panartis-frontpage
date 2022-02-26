@@ -19,6 +19,7 @@
     <div class="header">
         <div class="logo">
             <img src="/img/Logo.svg" class="logo" />
+            <img src="/img/Logo_Word.svg" class="logoword" />
         </div>
 
         <div class="hamburger">
@@ -29,6 +30,7 @@
     <header class="phantom">
         <div class="logo hidden">
             <img src="/img/Logo.svg" class="logo" />
+            <img src="/img/Logo_Word.svg" class="logoword" />
         </div>
         <div id="hamburger" class="hamburger hidden">
             <img src="/img/Hamburger.svg" class="hamburger" />
@@ -40,7 +42,7 @@
 
         <div id="slogan">
             <h1 class="slogan-text">
-                Revolutionizing art and collectibles research by providing information, insight, and collaboration.
+                Revolutionizing art and collectibles research<br/>by providing information, <br/>insight, and collaboration.
             </h1>
         </div>
 
@@ -197,11 +199,59 @@
         <div id="personal-space-cnt">
             <h3>MY PERSONAL SPACE</h3>
             <div id="carousel">
-                <div class="carousel-text">
-                    <h1>Catalogues are central to the platform. You can for instance create a catalogue raisonné, exhibits, etc.</h1>
+                <div class="arrow-right arrow" onclick="carouselMove('right')">
+                    <img src="img/Arrow_right.svg" />
                 </div>
-                <div id="carousel-image" class="carousel-image">
+                <div class="arrow-left arrow" onclick="carouselMove('left')">
+                    <img src="img/Arrow_left.svg" />
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h1>Catalogues are central to the platform. You can for instance create a catalogue raisonné, exhibits, etc.</h1>
+                    </div>
+                    <div id="carousel-image" class="carousel-image one">
 
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h1>Catalogues are central to the platform. You can for instance create a catalogue raisonné, exhibits, etc.</h1>
+                    </div>
+                    <div id="carousel-image" class="carousel-image two">
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h1>Catalogues are central to the platform. You can for instance create a catalogue raisonné, exhibits, etc.</h1>
+                    </div>
+                    <div id="carousel-image" class="carousel-image three">
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h1>Catalogues are central to the platform. You can for instance create a catalogue raisonné, exhibits, etc.</h1>
+                    </div>
+                    <div id="carousel-image" class="carousel-image four">
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h1>Catalogues are central to the platform. You can for instance create a catalogue raisonné, exhibits, etc.</h1>
+                    </div>
+                    <div id="carousel-image " class="carousel-image five">
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h1>Catalogues are central to the platform. You can for instance create a catalogue raisonné, exhibits, etc.</h1>
+                    </div>
+                    <div id="carousel-image" class="carousel-image six">
+
+                    </div>
                 </div>
 
             </div>
@@ -211,7 +261,7 @@
                         <p>NO CATALOGUES YET</p>
                         <a>ADD A CATALOGUE+</a>
                     </div>
-                    <div class="empty-category-text"><b>WHAT ARE CATALOGUES?</b> <br /><br />CATALOGUES are central to the PANARTIS platform. You can for instance create a catalogue raisonné, exhibits, and discuss about it. Decide where you share it, with peers only, or to the wider
+                    <div class="empty-category-text "><b>WHAT ARE CATALOGUES?</b> <br /><br />CATALOGUES are central to the PANARTIS platform. You can for instance create a catalogue raisonné, exhibits, and discuss about it. Decide where you share it, with peers only, or to the wider
                         art world. </div>
                     <input class="getstarted" type="button" value="GET STARTED" />
                 </div>
@@ -258,7 +308,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
 
 </body>
@@ -270,12 +319,36 @@
         pills = Array.from(document.querySelectorAll(".domain")),
         subdomainCnt = document.getElementById("subdomains-cnt"),
         subSections = Array.from(document.querySelectorAll(".subdomains-section")),
-
         searchBox = document.getElementById("search-box"),
         contentWrapper = document.getElementById("content-wrapper"),
         header = document.querySelector("header"),
-        pinnedPill = null;
+        pinnedPill = null,
+        images = Array.from(document.querySelectorAll(".carousel-item")),
+        currentCarouselImage = 0;
 
+
+    let carouselMove = (direction) => {
+
+        if (direction == 'right' && currentCarouselImage >= 0 && currentCarouselImage < images.length) {
+            currentCarouselImage++
+
+        } else if (direction == 'left' && currentCarouselImage > 0 && currentCarouselImage < images.length) {
+            currentCarouselImage--
+        }
+
+
+        let imageWidth = document.querySelector(".carousel-item").getBoundingClientRect().width,
+            distance = currentCarouselImage * imageWidth;
+
+
+        for (let i = 0; i <= images.length + 1; i++) {
+            gsap.to(images[i], {
+                duration: 0.5,
+                ease: "power3.inOut",
+                x: -distance
+            })
+        }
+    }
 
     let pillClicked = (element) => {
 
@@ -288,7 +361,7 @@
         } else if (element.querySelector(".pin").classList.contains("pinned")) {
             element.querySelector(".pin").classList.remove("pinned");
             // pills.filter(pill => pill != element).forEach(greypill =>
-            //     greypill.classList.remove("greyedout")
+            //     greypill.classList.remove("greyedout ")
             // );
         }
 
@@ -335,7 +408,7 @@
             subdomainCnt.classList.add("expanded")
         }
 
-        //el.querySelector("img").classList.add("pin");
+        //el.querySelector("img ").classList.add("pin ");
 
         if (el.classList.contains("humanities")) {
             colorPill("#F5E3A6", 0);
