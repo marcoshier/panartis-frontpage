@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Flip.min.js"></script>
     <link href="/style.css" rel="stylesheet">
     <title>Panartis - Front Page</title>
 </head>
@@ -14,11 +16,21 @@
 
     <!--HEADER-->
 
-    <header>
+    <div class="header">
         <div class="logo">
             <img src="/img/Logo.svg" class="logo" />
         </div>
+
         <div class="hamburger">
+            <img src="/img/Hamburger.svg" class="hamburger" />
+        </div>
+    </div>
+
+    <header class="phantom">
+        <div class="logo hidden">
+            <img src="/img/Logo.svg" class="logo" />
+        </div>
+        <div id="hamburger" class="hamburger hidden">
             <img src="/img/Hamburger.svg" class="hamburger" />
         </div>
     </header>
@@ -46,18 +58,21 @@
 
 
                     <div class="domain-cnt" onmouseleave="domainsOff()">
-                        <div class="domain pill humanities humanities-pill" onmouseover="domainOn(event, this)">
+                        <div class="domain pill humanities humanities-pill" onmouseover="domainOn(event, this)" onclick="pillClicked(this)">
                             <!-- TODO check class name conflict-->
+                            <img class="pin" src="img/pin-icon.svg" />
                             <span><i>in</i> Humanities</span>
-                            <img src="img/Dropdown_Arrow.svg" />
+                            <img class="dd" src="img/Dropdown_Arrow.svg" />
                         </div>
-                        <div class="domain pill science science-pill" onmouseover="domainOn(event, this)">
+                        <div class="domain pill science science-pill" onmouseover="domainOn(event, this)" onclick="pillClicked(this)">
+                            <img class="pin" src="img/pin-icon.svg" />
                             <span><i>in</i> Science</span>
-                            <img src="img/Dropdown_Arrow.svg" />
+                            <img class="dd" src="img/Dropdown_Arrow.svg" />
                         </div>
-                        <div class="domain pill markets markets-pill" onmouseover="domainOn(event, this)">
+                        <div class="domain pill markets markets-pill" onmouseover="domainOn(event, this)" onclick="pillClicked(this)">
+                            <img class="pin" src="img/pin-icon.svg" />
                             <span><i>in</i> Markets</span>
-                            <img src="img/Dropdown_Arrow.svg" />
+                            <img class="dd" src="img/Dropdown_Arrow.svg" />
                         </div>
                     </div>
 
@@ -185,7 +200,7 @@
                 <div class="carousel-text">
                     <h1>Catalogues are central to the platform. You can for instance create a catalogue raisonné, exhibits, etc.</h1>
                 </div>
-                <div class="carousel-image">
+                <div id="carousel-image" class="carousel-image">
 
                 </div>
 
@@ -198,7 +213,7 @@
                     </div>
                     <div class="empty-category-text"><b>WHAT ARE CATALOGUES?</b> <br /><br />CATALOGUES are central to the PANARTIS platform. You can for instance create a catalogue raisonné, exhibits, and discuss about it. Decide where you share it, with peers only, or to the wider
                         art world. </div>
-                    <input type="button" value="GET STARTED" />
+                    <input class="getstarted" type="button" value="GET STARTED" />
                 </div>
                 <div class="object-category">
                     <div class="category-header">
@@ -206,7 +221,7 @@
                         <a>ADD A GROUP +</a>
                     </div>
                     <div class="empty-category-text"><b>WHAT CAN YOU DO IN GROUPS?</b> <br /><br />GROUPS permits professionals to interact within controlled- access workspaces,you can create catalogue raisonné, exhibits, and joint research projects. </div>
-                    <input type="button" value="GET STARTED" />
+                    <input class="getstarted" type="button" value="GET STARTED" />
                 </div>
                 <div class="object-category">
                     <div class="category-header">
@@ -214,7 +229,7 @@
                         <a>ADD AN ORGANIZATION+</a>
                     </div>
                     <div class="empty-category-text"><b>WHAT CAN YOU DO IN ORGANIZATIONS?</b> <br /><br />ORGANIZATIONS lets dealer consortia and musea share information, more text to explain what you can do here. </div>
-                    <input type="button" value="GET STARTED" />
+                    <input class="getstarted" type="button" value="GET STARTED" />
                 </div>
                 <div class="object-category">
                     <div class="category-header">
@@ -223,7 +238,7 @@
                     </div>
                     <div class="empty-category-text"><b>WHAT IS NEWS?</b> <br /><br />CATALOGUES are central to the PANARTIS platform. You can for instance create a catalogue raisonné, exhibits, and discuss about it. Decide where you share it, with peers only, or to the wider art world.
                     </div>
-                    <input type="button" value="GET STARTED" />
+                    <input class="getstarted" type="button" value="GET STARTED" />
                 </div>
                 <div class="object-category">
                     <div class="category-header">
@@ -231,7 +246,7 @@
                         <a>ADD AN EXHIBITION +</a>
                     </div>
                     <div class="empty-category-text"><b>WHAT CAN YOU DO IN EXHIBITIONS?</b> <br /><br />GROUPS permits professionals to interact within controlled- access workspaces,you can create catalogue raisonné, exhibits, and joint research projects </div>
-                    <input type="button" value="GET STARTED" />
+                    <input class="getstarted" type="button" value="GET STARTED" />
                 </div>
                 <div class="object-category">
                     <div class="category-header">
@@ -239,7 +254,7 @@
                         <a>ADD MEDIA +</a>
                     </div>
                     <div class="empty-category-text"><b>WHAT CAN YOU DO IN MEDIA? </b> <br /><br /> ORGANIZATIONS lets dealer consortia and musea share information, more text to explain what you can do here. </div>
-                    <input type="button" value="GET STARTED" />
+                    <input class="getstarted" type="button" value="GET STARTED" />
                 </div>
             </div>
         </div>
@@ -254,9 +269,37 @@
         pillsCnt = document.querySelector(".domain-cnt"),
         pills = Array.from(document.querySelectorAll(".domain")),
         subdomainCnt = document.getElementById("subdomains-cnt"),
-        subdomainCntWidth = subdomainCnt.getBoundingClientRect().width,
-        subSections = Array.from(document.querySelectorAll(".subdomains-section"));
+        subSections = Array.from(document.querySelectorAll(".subdomains-section")),
 
+        searchBox = document.getElementById("search-box"),
+        contentWrapper = document.getElementById("content-wrapper"),
+        header = document.querySelector("header"),
+        pinnedPill = null;
+
+
+    let pillClicked = (element) => {
+
+        console.log(element.querySelector(".pin").classList)
+        if (!element.querySelector(".pin").classList.contains("pinned")) {
+            element.querySelector(".pin").classList.add("pinned");
+            pills.filter(pill => pill != element && !pill.querySelector(".pin").classList.contains("pinned")).forEach(greypill =>
+                greypill.classList.add("greyedout")
+            );
+        } else if (element.querySelector(".pin").classList.contains("pinned")) {
+            element.querySelector(".pin").classList.remove("pinned");
+            // pills.filter(pill => pill != element).forEach(greypill =>
+            //     greypill.classList.remove("greyedout")
+            // );
+        }
+
+
+
+        if (pinnedPill == null) {
+            pinnedPill = element
+        } else {
+            pinnedPill = null
+        }
+    }
 
     let moveSubdomains = (distance) => {
 
@@ -264,6 +307,7 @@
 
     let colorPill = (color, i) => {
         subdomainCnt.style.backgroundColor = color
+        let subdomainCntWidth = subdomainCnt.getBoundingClientRect().width
         let distance = i * subdomainCntWidth
 
         subSections.forEach(subsection => {
@@ -281,12 +325,17 @@
 
 
         el.classList.remove("greyedout");
-        pills.filter(pill => pill != el).forEach(greypill => greypill.classList.add("greyedout"));
+        pills.filter(pill => pill != el && !pill.querySelector(".pin").classList.contains("pinned")).forEach(greypill =>
+            greypill.classList.add("greyedout")
+
+
+        );
 
         if (subdomainIsOn == false) {
             subdomainCnt.classList.add("expanded")
         }
 
+        //el.querySelector("img").classList.add("pin");
 
         if (el.classList.contains("humanities")) {
             colorPill("#F5E3A6", 0);
@@ -299,7 +348,7 @@
 
     let collapse = () => {
 
-        pills.forEach(pill => {
+        pills.filter(pill => !pill.querySelector(".pin").classList.contains("pinned")).forEach(pill => {
             if (pill.classList.contains("greyedout")) {
                 pill.classList.remove("greyedout")
             }
@@ -340,7 +389,6 @@
 
     let subdomainsOn = () => {
         subdomainIsOn = true;
-        console.log(subdomainIsOn)
     }
 
     let subdomainsOff = () => {
@@ -356,6 +404,152 @@
         }, debounce);
 
     }
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(Flip)
+
+    let triggered = false,
+        minimized = false
+
+    let searchBoxAnimation = (reverse) => {
+
+        let tl = gsap.timeline();
+        if (triggered == false && reverse == false) {
+
+            triggered = true
+
+            let state = Flip.getState(searchBox);
+            let parent = searchBox.parentNode === contentWrapper ? header : contentWrapper
+            let child = document.getElementById("hamburger")
+
+            if (parent.contains(child)) {
+                parent.insertBefore(searchBox, child);
+
+                Flip.from(state, {
+                    duration: 0.55,
+                    ease: "Power4.inOut",
+                    scale: true
+                })
+
+
+                tl.to(searchBox, {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        height: "41px",
+                        marginTop: "0"
+                    }, 0)
+                    .to(".phantom-box", {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        height: "100%",
+                        border: "1px solid #2f2f2f30"
+                    }, 0)
+                    .to(".placeholder", {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        lineHeight: "41px",
+                        fontSize: "18px"
+                    }, 0)
+                    .to(".domain", {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        height: "37px",
+                        margin: "2px 3px !important"
+                    }, 0)
+                    .to(".domain span", {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        lineHeight: "41px"
+                    }, 0)
+            }
+        } else if (triggered == false && reverse == true) {
+
+            triggered = true
+
+            let state = Flip.getState(searchBox);
+
+            let parent = (searchBox.parentNode === contentWrapper ? header : contentWrapper)
+            let child = document.getElementById("personal-space-cnt")
+
+            if (parent.contains(child)) {
+                parent.insertBefore(searchBox, child);
+
+                Flip.from(state, {
+                    duration: 0.55,
+                    ease: "Power4.inOut",
+                    scale: true
+                })
+
+                tl.to(searchBox, {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        height: "80px",
+                        marginTop: "40px"
+                    }, 0)
+                    .to(".phantom-box", {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        height: "54px",
+                        border: "1px solid #2f2f2f00"
+                    }, 0)
+                    .to(".placeholder", {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        lineHeight: "54px",
+                        fontSize: "23px"
+                    }, 0)
+                    .to(".domain", {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        height: "46px",
+                        margin: "4px 2px !important"
+                    }, 0)
+                    .to(".domain span", {
+                        duration: 0.75,
+                        ease: "Power4.inOut",
+                        lineHeight: "46px"
+                    }, 0)
+            }
+
+
+        }
+
+
+
+        triggered = false
+
+    }
+
+    let imageAnimation = () => {
+        gsap.to("#carousel-image", {
+            scrollTrigger: {
+                trigger: "#carousel-image",
+                start: "top bottom",
+                end: "bottom center",
+                scrub: 1
+            },
+            scale: 1.0,
+            y: 0,
+            ease: "power4.inOut",
+            duration: 3.8
+        })
+    }
+
+    let initAnimations = () => {
+
+        document.addEventListener("wheel", (e) => {
+
+            e.stopPropagation()
+            if (event.deltaY > 0 && document.body.scrollTop >= 200) {
+                searchBoxAnimation(false);
+            } else if (event.deltaY < 0 && document.body.scrollTop < 200 && document.body.scrollTop >= 0) {
+                searchBoxAnimation(true);
+            }
+        });
+        imageAnimation();
+    }
+
+    initAnimations();
 </script>
 
 </html>
