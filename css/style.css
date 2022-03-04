@@ -1,0 +1,798 @@
+@font-face {
+    font-family: GT Sectra;
+    src: url(../fonts/GT-Sectra-Medium-Trial.woff2);
+}
+
+@font-face {
+    font-family: Maison Neue Light;
+    src: url(../fonts/MaisonNeueWEB-Light.woff);
+}
+
+@font-face {
+    font-family: Maison Neue Book;
+    src: url(../fonts/MaisonNeueWEB-Book.woff);
+}
+
+@font-face {
+    font-family: Maison Neue Demi;
+    src: url(../fonts/MaisonNeueWEB-Demi.woff);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Maison Neue Book, sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #EFEFE3;
+    color: #2f2f2f;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+b {
+    font-family: Maison Neue Demi;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    background-color: transparent;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100vw;
+    background-color: #EFEFE300;
+    z-index: 999;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#content-wrapper {
+    position: relative;
+    top: 76px;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    height: 28px;
+    margin-left: 7px;
+}
+
+.logoword {
+    height: 28px;
+    margin-left: 12px;
+    margin-bottom: 1px;
+}
+
+.hamburger {
+    float: right;
+    height: 20px;
+    margin-right: 17px;
+    margin-top: 1px;
+}
+
+#slogan {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 35vh;
+}
+
+.slogan-text {
+    max-width: 90%;
+    font-family: GT Sectra;
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 1px;
+    line-height: 1.35;
+}
+
+#search-box {
+    position: relative;
+    background-color: transparent;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.minimized {
+    height: 41px !important;
+    margin-top: 0px !important;
+    transition: all 0.5s ease;
+}
+
+.phantom-box {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FFFCEF;
+    border: 1px solid #2f2f2f00;
+    border-radius: 41px;
+    width: 96%;
+    height: 54px;
+    transition: all 0.2s ease;
+    z-index: 2;
+    user-select: none;
+}
+
+.phantom-box:hover {
+    background-color: #fffef7;
+    transition: all 0.2s ease;
+}
+
+.lens {
+    user-select: none;
+    pointer-events: none;
+    padding: 0 17px;
+}
+
+.input-cnt {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-self: flex-start;
+}
+
+input[type="search"] {
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    z-index: 1;
+    min-height: 100%;
+    width: 100%;
+    font-size: 23px;
+    line-height: 23px;
+    color: #2F2F2F;
+}
+
+.placeholder {
+    position: absolute;
+    min-height: 100%;
+    font-size: 23px;
+    line-height: 54px;
+    visibility: visible;
+    white-space: nowrap;
+    color: #878782;
+}
+
+input[type=search]:valid~.placeholder {
+    visibility: hidden;
+}
+
+
+/* clears the ‘X’ from Internet Explorer */
+
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+
+/* clears the ‘X’ from Chrome */
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.filters-btn {
+    position: relative;
+    border-radius: 41px;
+    height: 46px;
+    display: flex;
+    margin-right: 5px;
+    margin-left: 3px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filters-btn:hover {
+    background: #EFEFE3;
+}
+
+.filters-btn p {
+    visibility: hidden;
+    max-width: 0;
+    opacity: 0;
+    margin-left: -12px;
+    font-size: 10px;
+    transition: all 0.1s ease;
+}
+
+.filters-btn:hover>p {
+    visibility: visible;
+    max-width: 34px;
+    margin-left: 13px;
+    opacity: 1;
+    transition: all 0.1s ease;
+}
+
+.filters-btn img {
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
+    padding: 11px 15px;
+}
+
+.inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.domain-cnt {
+    height: 100%;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+}
+
+.domain {
+    flex-shrink: 0;
+    border-radius: 28px;
+    cursor: pointer;
+    height: 46px;
+    margin: 4px 2px;
+    transition: all 0.1s ease;
+    overflow: hidden;
+}
+
+.domain span {
+    font-family: Maison Neue Book;
+    user-select: none;
+    pointer-events: none;
+    line-height: 46px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: all 0.1s ease;
+}
+
+.domain:hover>.domain span {
+    margin-right: 0px;
+    transition: all 0.1s ease;
+}
+
+.domain img {
+    width: 15px;
+}
+
+.pin {
+    margin-left: -15px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.pinned {
+    margin-left: 18px;
+    pointer-events: all !important;
+    opacity: 1 !important;
+    transition: all 0.2s ease;
+}
+
+.domain:hover>.pin {
+    margin-left: 18px;
+    opacity: 0.5;
+    transition: all 0.1s ease;
+}
+
+.domain .dd {
+    opacity: 0;
+    margin-right: -15px;
+    transition: all 0.1s ease;
+}
+
+.domain:hover .dd {
+    margin-right: 10px;
+    opacity: 1;
+    transition: all 0.1s ease;
+}
+
+.domain:last-child {
+    margin: 4px 0;
+}
+
+.humanities-pill {
+    background-color: #F5E3A6;
+}
+
+.science-pill {
+    background-color: #96EFAA;
+}
+
+.markets-pill {
+    background-color: #F4B5B1;
+}
+
+.domain span i {
+    user-select: none;
+    pointer-events: none;
+    opacity: 60%;
+    font-style: normal;
+}
+
+.greyedout {
+    opacity: 40%;
+    transition: all 0.3s ease;
+}
+
+#subdomains-cnt {
+    position: absolute;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    width: 96%;
+    height: 0px;
+    z-index: 1;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.35s ease;
+}
+
+.expanded {
+    visibility: visible !important;
+    height: 260px !important;
+    opacity: 1 !important;
+    transition: all 0.35s ease;
+}
+
+.subdomains-cnt-img {
+    align-self: flex-end;
+    position: relative;
+    display: flex;
+    height: 70%;
+    bottom: 11px;
+    left: 10px;
+}
+
+.subdomains-cnt-img img:nth-child(1) {
+    border-bottom-left-radius: 18px;
+}
+
+.subdomains-cnt-img img {
+    flex-shrink: 0;
+    opacity: 0.5;
+    filter: grayscale(0.8);
+    transition: all 0.2s ease;
+}
+
+.tb-active {
+    opacity: 1.0 !important;
+    filter: grayscale(0.0) !important;
+    transition: all 0.2s ease;
+}
+
+.subdomains-cnt-desc {
+    align-self: center;
+    margin-left: 30px;
+    font-size: 17px;
+    max-width: 180px;
+}
+
+.subdomains-cnt-desc p {
+    width: 12vw;
+}
+
+.subdomains-sections {
+    position: relative;
+    flex-basis: 55%;
+    height: 75%;
+}
+
+.subdomains-section {
+    position: absolute;
+    bottom: 0;
+    height: 80%;
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.subdomains {
+    width: 70%;
+    margin-bottom: 0;
+    margin-top: 80px;
+    margin-left: 60px;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.subdomain input {
+    display: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.subdomain label {
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.subdomain label::before {
+    content: '';
+    position: absolute;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #2f2f2f;
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    left: -25px;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    border-radius: 2px;
+    background-color: #2f2f2f;
+    transform-origin: center;
+    display: block;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    transform: scale(0.0);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    left: -25px;
+}
+
+input:checked+label:after {
+    transform: scale(0.65);
+    transition: all 0.18s ease;
+}
+
+.options {
+    position: relative;
+    bottom: 20px;
+    margin-right: 28px;
+    height: 58%;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.options a {
+    color: #2f2f2f;
+}
+
+.deactivate {
+    align-self: flex-end;
+}
+
+.save {
+    flex-basis: 100%;
+}
+
+#personal-space-cnt {
+    position: relative;
+    width: 99vw;
+    margin: 0 0.5vw;
+    min-height: 80vh;
+    top: 210px;
+}
+
+#personal-space-cnt h3 {
+    font-family: Maison Neue Demi;
+    display: block;
+    width: 99%;
+    margin: 8px 0.5%;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2f2f2f;
+    letter-spacing: 0.8px;
+}
+
+#carousel {
+    position: relative;
+    height: 80vh;
+    min-width: 99%;
+    margin: 0 0.5%;
+    min-height: 560px;
+    overflow: hidden;
+    display: flex;
+}
+
+.carousel-item {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-basis: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+    transform: translate(0, -50px) scale(1.1);
+    filter: brightness(0.7);
+}
+
+.one {
+    background-image: url("../img/carousel_0.png");
+    z-index: 9;
+}
+
+.two {
+    background-image: url("../img/carousel_1.jpg");
+    z-index: 8;
+}
+
+.three {
+    background-image: url("../img/carousel_2.jpg");
+    z-index: 7;
+}
+
+.four {
+    background-image: url("../img/carousel_3.jfif");
+    z-index: 6;
+}
+
+.five {
+    background-image: url("../img/carousel_4.jpg");
+    z-index: 5;
+}
+
+.six {
+    background-image: url("../img/carousel_6.jpg");
+    z-index: 4;
+}
+
+.carousel-text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    height: 100%;
+    margin: 0 17.5%;
+    text-align: center;
+    z-index: 12;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    z-index: 300;
+}
+
+.arrow-left {
+    left: 10px;
+    transform: translate3d(0, 0, 0) scale(0.95);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.arrow-left:hover {
+    opacity: 0.9;
+    transform: translate3d(-4px, 0, 0) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.arrow-right {
+    transform: translate3d(0, 0, 0) scale(0.95);
+    opacity: 1;
+    transition: all 0.3s ease;
+    right: 10px;
+}
+
+.arrow-right:hover {
+    opacity: 0.9;
+    transform: translate3d(4px, 0, 0) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.carousel-text h1 {
+    font-family: GT Sectra;
+    color: #FFFFFF;
+    font-size: 45px;
+    letter-spacing: 1px;
+    line-height: 1.35;
+}
+
+#objects-cnt {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 8px;
+    margin-top: 20px;
+    margin-left: 0.5vw;
+    padding-bottom: 50px;
+}
+
+.object-category {
+    position: relative;
+    width: 98.6%;
+    height: 30vw;
+    border-radius: 3px;
+    background-color: #FCFAF3;
+}
+
+.category-header {
+    position: absolute;
+    height: 54px;
+    line-height: 40px;
+    align-items: center;
+    width: 90%;
+    display: flex;
+    font-size: 12px;
+    flex-direction: row;
+    margin-left: 5%;
+    justify-content: space-between;
+}
+
+.category-header p {
+    font-family: Maison Neue Light;
+    font-size: 13px;
+}
+
+.category-header a {
+    font-family: Maison Neue Demi;
+    font-size: 14px;
+    color: #2f2f2f;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: -2px;
+}
+
+.category-header a:hover {
+    text-decoration: none;
+}
+
+.object-category input {
+    position: absolute;
+    width: 65%;
+    margin-left: 17.5%;
+    bottom: 30px;
+    height: 70px;
+}
+
+.empty-category-text {
+    position: absolute;
+    top: 25%;
+    letter-spacing: 1px;
+    width: 65%;
+    margin-left: 17.5%;
+}
+
+.getstarted {
+    cursor: pointer;
+    font-family: Maison Neue Demi;
+    border: 1px solid #2f2f2f30;
+    outline: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    background: #FBF8F8;
+}
+
+.getstarted:hover {
+    background: #EFEFE3;
+    border: none;
+}
+
+.indicator {
+    position: fixed;
+    top: 200px;
+    left: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+#sdi {
+    margin-left: 130px;
+}
+
+.active {
+    background-color: green !important;
+}
+
+@media screen and (max-width: 1280px) {
+    #objects-cnt {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 8px;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    #objects-cnt {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 8px;
+    }
+    .object-category {
+        height: 55vh;
+    }
+    .slogan-text,
+    .carousel-text h1 {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .slogan-text,
+    .carousel-text h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .inner-wrapper {
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .logoword {
+        display: none;
+    }
+    .slogan-text,
+    .carousel-text h1 {
+        font-size: 19px;
+    }
+}
