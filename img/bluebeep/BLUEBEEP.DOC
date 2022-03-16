@@ -1,0 +1,1062 @@
+
+
+
+ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+
+                  PLEASE READ THIS DOC FILE FROM THE PROGRAM.
+             IT HAS COLORCODES IN IT THAT WOULD MAKE IT IMPOSSIBLE
+                     TO READ FROM A NORMAL TEXTFILE LISTER.
+
+                                    THANKS.
+
+           Select Info/Documentation in BlueBEEP to read this manual.
+              If you need or prefer plain ASCII, run PLAINDOC.EXE
+
+           This doc file is made up to be read by the Dr. Reader (TM)
+                          (C) 1993 by Onkel Dittmeyer
+
+             If you are interested in using Dr. Reader (TM) in your
+                     own programs, contact Onkel Dittmeyer.
+
+ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         I told you to get outta here!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 Final chance!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              You asked for it...
+
+
+
+
+
+
+
+
+
+
+
+
+
+.DOCUMENT BlueBEEP Documentation
+.TOPIC Important
+.SUBTITLE Important information - Read this FIRST!
+
+|C1. |cMy PGP public key has been replaced with a new one. Please use only
+   the one included in this zip, and replace it in your keyring.
+   By the way, the old key had ID B8D1BB, new one has ID 6CC499.
+   The new key is available as |CODPGPKEY.ASC|c in this ZIP archive.
+
+|C2. |cFASHiONLAND BBS, the official BlueBEEP Support Site, is DOWN.
+   Until I find a new worthy site for BBP, it remains siteless.
+
+|C3. |cNew: BlueBEEP-News Mailing List!
+   If you always want to receive the most recent news about the
+   development of BlueBEEP, its new features and releases, send
+   a message to |Conkeld@ponton.hanse.de|c Subject: |CBBP Mailing List
+   with the desired email adress in the body of the message.
+
+|C4. |cYet another time: I am |d*|Cnot|d* |cthe phreaking hotline for
+   the northern hemisphere, nor am I helping anybody to know more
+   about blue boxing or any other (|Cillegal|c) phraudulent use of
+   telephone systems. Dont call me, dont send email, laMeRzZ@#!
+
+.END
+.TOPIC Introduction
+.SUBTITLE Words from the reject called "author"
+
+Yo everybody,
+
+I am proud to be able to present you the latest, the one and only, the
+unbelievable, innocent, colorful, phun-philled BlueBEEP, version 0.07· !
+
+Released on the |CHoHoCon '93 |cparty held in Austin, TX winter 1993.
+
+This version is nothing that a BlueBEEP that has less bugs, is more
+compatible, and has more "little goodie" options to make your life
+easier. A good example is the ALT-W (Worldtime) in the dialer. No
+"major" features have been added, as I just cannot SEE any features
+which I could add. Well, I could write a NUA attacker, a war dialer,
+or something like that and add it in, but there are already very good
+programs available for this purpose (eg. if you are looking for a good
+wardialer, try ToneLoc). I could also have been writing nonsense features
+(like a Tic-Tac-Toe in the dialbutton window of the dialer), but what
+is it good for? Nuttin. This is a solid, working, almost bug-free,
+comfortable and good-looking dialer. Chew it.
+
+(If you find a feature you would like to see added, send mail, and
+ I bet a million dollars that I will add it in, because there is
+ nothing else to do on this thing.)
+
+Basically, this release is a complete miracle, because somewhen in
+September, every programmer's nightmare, a total devastation, the coders
+personal horror show, a digital asassin took place in my tiny apartment
+in the nice peaceful city of Hamburg, Germany. A trojan horse unleashed
+its evil power and sent both of my hard drives to eternity, to the
+hunting grounds of all bits, to HELL.
+
+After falling to the floor and struggling with unconciousness for at least
+2 hours, I realized that everything was gone. 212848274 bytes free. I
+grabbed for the coke can, and it fell. To the wrong place. The sticky
+liquid soaked the desk, and, the backup disks. General Failure, Abort,
+Retry, commit Suicide? was the message I got when I tried to PkUnzip (R)
+the files on the backup disk. The horror. The horror.
+
+Then, I got all pissed off. I decided to get a life, not to hang around on
+the keyboard 25 hours a day, trying to win the fight of the humans against
+the computers and telcos. But, Onkel Dittmeyer would not be Onkel
+Dittmeyer, if I would not have been lusting for a compiler and an editor
+after a couple weeks. So, I blew the dust off the keyboard, fired up my
+machine, and tried to seize parts of the source code from the physical
+cylinders of my trusty drive. The result was a 5,9 MB large file called
+ASH.BIN that contained about 25000 lines of pascal source, fragmented,
+shattered, plus millions of control characters, parts from zip files,
+and other junk.
+
+I made my way through this garbage. A couple weeks, $600 on pizza home
+delivery, and one School-You-Are-Fired letter later, BlueBEEP was back in
+a hardly compilable shape. That got me high. I did it. 48 hours of non-
+stop programming later, BlueBEEP was back in the shape where I had it
+before the trojan asassin took place. I looked at the calendar on the
+wall. November 9th, 1993. I looked over to the desk. And I saw it.
+The ticket. SCANDINAVIAN SAS, HAM-LAX, 12/01/93, 0845. In less than
+three weeks I would be on my way to california, and I should have
+BlueBEEP ready to be released at the HoHoCon 3 weeks later in Texas.
+No way I could program any further after 12/01/93, 0845. This was my
+deadline. I glanced at my watch, and soaked in the tasty smoke from the
+joint in my left hand. Lets go for it.
+
+November 11th, the thrill came to a new max. My mom returned from her
+3-week spain vacation, which she payed with money she stole me. That
+raised my motivation like shit. It really gets you highly agressive
+and motivated if you are staying with someone where you know, that she
+will steal all your cash and sell your equipment if you go out for dinner.
+
+Agressivity. That is the key word. Agressivity that causes a lion to
+survive. Just like me. A line of coke. Ahhh. Onkel Dittmeyer on his
+highest point of agressivity, motivation to kill. Or code, whatever way
+you might put this. Eliminating bugs. Asassinating slack code. And
+anything else that comes into my way. Groooan, I said, and put "Killing
+Season" into my DAT tape deck. 777-095. "Sorry, we dont have pizza
+with ripped-off baby heads, sir." Phuckups. Where's my M-60? Lets kill
+this though, back to work. The Major Threat of the telcos is back, and
+more fucking evil than ever before.
+
+
+" Cut the crap, bucko-boy. " (WoD!)
+
+.END
+.TOPIC History
+.SUBTITLE The Revision History: New features & bug fixes
+
+|C*  |cfixed feature
+|C+  |cadded feaure
+|C-  |cremoved feature
+
+|CVersion 0.00·     |cNon-Public Test Release for friends
+  |B02/25/93
+
+|CVersion 0.01·     |cFirst Public Release of BlueBEEP!
+  |B03/02/93
+
+|CVersion 0.02·  *  |cFixed export phonebook, will now only export used entries
+  |B03/05/93     |C+|c  Added number menu in action screen, no switching
+                  around anymore !
+               |C+|c  Added MUSIC to default dial set, to bug the remote :)
+
+|CVersion 0.03·  +  |cAdded reader for documentation from within BlueBEEP!
+  |B04/15/93     |C+|c  Added PBX / Routing scanning mode, very flexible
+               |C+|c  Added /S command line option to start in scanning mode
+               |C+|c  Added PC Speaker sound for some stuff,
+                  tell me if you like it !
+               |C+|c  Added option to import TLO 0.1·-0.9· phone book
+               |C+|c  Added option to import TLO 1.0 or later phone book
+               |C*|c  Fixed saving of current phone number, when you
+                  exit BlueBEEP now and load it back, you will be
+                  at the exact same position in the phonebook as
+                  before
+               |C+|c  Added Red Box for our ameriKKKan friends. Just put
+                  the fancy tones on a tape and play it to your
+                  payphones! Tell me if it works....
+               |C*|c  Fixed a bug with the colors when
+                  test-playing trunks in trunk editing mode
+               |C+|c  Added Three-Frequency dial sets and trunks
+               |C+|c  Added R2-forward and R2-backward dial sets
+               |C+|c  Added password protection for BlueBEEP!
+               |C+|c  Phonebook is now being saved in encrypted form!
+               |C*|c  Fixed that NASTY bug with locking up in setup menu
+                  when pressing Cursor-Left and Cursor-Right keys
+               |C+|c  Added Flight Through Space, just for fun, try
+                  Cursors, 2, 8, 4, 6, and ESC... may be used as a
+                  screen saver in the future
+               |C+|c  Added one-key selection in main menu, just press
+                  the first letter, like S for setup, T for tools etc.
+               |C*|c  Fixed the clock to lose the ":" sometimes
+               |C*|c  Changed phonebook to dynamic memory management,
+                  so it's a bit faster and eats less memory
+
+|CVersion 0.04·  |C*  |cChanged Input-Routines to the better, you can now
+  |B05/04/93        |cuse INS in it, has errorbeeps and is more stable
+               |C*|c  Fixed "Flight Through Space" Screen Saver which
+                  ran only one time per session (arflbl....)
+               |C*|c  BlueBEEP often locked up with a cyan screen at
+                  startup when pwd protection was on...Fixed!
+               |C*|c  Lenght ?? Length !!!
+               |C*|c  Fixed |Cwrong email adress|c in docs and program !
+               |C*|c  The BlueBEEP ZIP is now made with ZIP 2.04g and -ex
+                  option to save you download time and money...
+               |C+|c  My PGP public key is now included into the archive,
+                  so if you wish to send me sensitive stuff, use it !
+
+|CVersion 0.05·  |C+|c  Added Calling Card Talker - see docs for details.
+  |B07/05/93        |cIts freely configurable and flexible and requires
+                  a soundblaster card
+               |C+|c  Added command line parameter /T to start in CC talkmode
+               |C+|c  Added command line parameter /? to gain help info
+               |C*|c  Fixed a bug in the doc file reader that made BlueBEEP
+                  mess up the documentation while reading...bummer..
+               |C+|c  Added mouse support. Load your mouse driver before
+                  you load BlueBEEP. Check docs for more information
+               |C-|c  Removed "command line parameters" item from INFO menu.
+                  Please check the docs for parameters avaiable.
+               |C+|c  Added command line option /NOMOUSE to force mouse off
+               |C*|c  I hope you enjoy the new logo !
+               |C+|c  Added Import Calling Card List function
+               |C+|c  Added [DEL] key in action mode: deletes current number
+               |C*|c  Fixed bug with loading back active dial set, works now!
+               |C*|c  Password is now also updated if you do a "dirty exit"
+               |C+|c  Added Frequency Tester
+               |C+|c  Added |CPulse Dialing|c via hardware device - check docs !
+               |C*|c  Fixed bug when pressing "0" in screen saver
+               |C*|c  Fixed a small bug with the input routines
+               |C*|c  Fixed a bug with phucking up with PgDn in phonebook
+               |C+|c  Added Mark/Space time for dial sets and "Dial Speed"
+                  is now the factor for the mark/space in the set
+               |C+|c  Added command line parameter /F to start in freq tester
+               |C*|c  Fixed a nasty menu "skipping" bug
+               |C+|c  Added /DEBUG command line switch
+               |C+|c  Added configurable color palette
+               |C+|c  Added Keypad Flip option, your keypad is then just like
+                  a telephone keypad; default is ON
+               |C+|c  Added autoadvance in trunk edit mode frequently req'd
+               |C+|c  Added "Please Wait" function to Action Mode
+               |C*|c  Keys now only flash if there's actually a tone sent
+               |C+|c  Added quick sample and -replay function (Q+R)
+               |C+|c  Added card checker. Great for calling and credit
+                  card dealers (Hi Wanderer!)
+               |C+|c  BlueBEEP now has a support BBS.
+                  Call |C≠FASHiONLAND!|c, +49-40-7922585
+
+|CVersion 0.06·  |C+|c  Added the flip keypad option to be freely configurable
+  |B07/13/93     |C*|c  Changed Device Mode Change key from M to ALT-M
+               |C+|c  Added modem dialing! Lean back and enjoy !
+               |C+|c  Added little terminal program (option /TERM)
+               |C*|c  Re-organized the |Cwhole|c source code, puhh!
+               |C*|c  BlueBEEP won't phuck up anymore in the doc reader..
+               |C+|c  Added touchy telephone pad option..try it out!!!!
+
+|CVersion 0.07·  |C+|c  Added BSLI script interpreter, automated sessions
+  |B12/17/93     |C+|c  Added external BSLI script interpreter
+ |YHoHoCon'93    |C+|c  Added PhoneWord telephone keypad letter help utility
+               |C*|c  Re-wrote 60% of the source code after a trojan asassin
+               |C*|c  Changed display and memory handling
+               |C+|c  Added support for monochrome display cards
+               |C*|c  Fixed lockups and bugs almost 90%
+               |C+|c  Added freely configurable color system
+               |C*|c  Changed DEL option to re-organize phone book too
+               |C+|c  Added INS option to insert a blank entry on the
+                  current position in the phone book (on users request).
+               |C*|c  Re-write the documentation system
+               |R!|c  FASHiONLAND BBS IS DOWN!
+               |C*|c  The Revision History is now a part of the doc system
+               |C+|c  Added feature for scanning mode: Strip 0's
+               |C+|c  Added WorldTime in Action Mode (ALT-W) Very handy!
+               |C+|c  Added On-The-Fly edit in FreqTester (F7)
+               |C-|c  Removed Tiny Terminal, but try M in Action Mode
+               |C+|c  Added DialTranslation - BDIAL compatible!
+               |C+|c  Added phonebook sort, just press ALT-S
+               |C+|c  Added PLAINDOC.EXE - will convert the indexed
+                  docs into a plain text file that you can print
+                  out with no problems and no color codes
+
+.END
+.TOPIC Greetings
+.SUBTITLE Greetings to the Beloved and Hatred
+
+I would like to thank the following people for their support and
+mental kicks - without them, BBP would not be as great as it is today:
+
+|CCasanova
+    BlueDial kicks. I "borrowed" some nice ideas from it. I would like
+    to have a nice voice conversation with you one day, just call me up.
+
+|CJason Farnon
+    Good job on AWA. Your stuff exactly gets the point. N33T & 3l33+.
+
+|CTr8or
+    I know that greetings here is the last thing you would expect.
+
+|CChriZzZz!
+    No shoes, no shirt, no service.
+
+|CVenom / Alpha Force Productions
+    Thanks for the greetings in your latest MegaDemo, keep up the
+    good work. Your BBS is really cool. Call it: +358-42-714528.
+
+|CJean-Luc Picard
+   "Computer.  Recognize Picard, Jean-Luc.  Kitchen Lights ON,
+    Turn ON the VCR and hit RECORD.  Close the Curtains, and
+    turn on the Extasy Channel. Prepare to record "Chicks with Dicks."
+
+                        - Jean Luc Picard
+                          Stardate 1992.4, 2:45 A.M.
+
+|CPhilthy Phred
+    Waiting for COMPETITION. You had your chance. I was out
+    for 3 months. Now show off.
+
+|CUrmel
+    Credits to you for the ADLIB Sound Routines! Hat off!
+    And, your TLO made me start this project. It's rather
+    ugly, you should start working on a better outfit !
+    Look at this program! It looks fine, has an extremely
+    FAST user interface, and is eazy to use.
+    BTW maybe you'd like my Sound Blaster soundroutines ??
+
+|CJoyce from AT&T USA Direct
+    Thank you for nice friendship. Nice fun talking to you,
+    but could you put me through without card please ?
+    OK you will be fired but who cares :))
+
+|CJohnny Wippenheim
+    Thank you for the yodeling course, dude. You are the
+    fucking best yodler on this planet. Yodel On!
+
+|CDr. Wippenburgh
+    Wow ! One of Johnny's relatives that I have spotted
+    in New Jersey. Call him at (201)857-2666. No kiddin.
+    By the way, the PIN number for his answerring machine
+    is #10, have fun !
+
+|CSmokie the Bear
+    Without him we wouldn't know who can prevent forest
+    fires. You know it kids!
+
+|CLord Disembowelment (former TDT)
+    Gave me the mental kicks that I never stopped working.
+    And, he is the best one in the marketing of gReAt uS bEeF!
+
+|CLucifer
+    How's life going at the end of the world ? Big thanks
+    to you for spotting some MAJOR bugs. Lemme know when
+    your mom's gonna have her next mental orgasm haha....
+
+|CDanny from Spain
+    Spotted a shitload of major bugs - thanks, the are all fixed
+    now with 0.07·. And, thank you for downloading using my
+    account on Boomtown. I will hop into the next plane and kick
+    your ass (...kidding...)
+
+|CElroy of the Electronic Rats
+    You and your group are a bunch of lame assholes.
+    Next time when you steal source code tell me where it's from.
+
+|CBlack Rider of the Electronic Rats
+    Get out of the house, let the sun touch your skin,
+    and look for some real stuff to do. Trading is not the life.
+
+|CChristopher Schanck
+    Your Editor rules. Never seen anything more powerful.
+    BTW every programmer on this world should use it!
+    Can't wait for 3.10.
+
+|CMarcus
+    Sold me the great Demon Dialer, and gave me lots of
+    inspiration for new features I should add to BBP.
+    Also created the BlueBEEP hardware, and gave 90%
+    of the ideas for the Frequency Tester and CardChecker.
+    Also responsible for the Cigarette and MÅllerMilch supply.
+
+|CJim Davis
+    GARFIELD RULES! HAR HAR! ROTFL!!!
+
+|CPing Pong
+    Lots, pantloads of amusement in the last alliance. You
+    are so lame d00d. I will send you a cake with a bomb to
+    your 13th anniversary.
+
+|CGerman TELECOM
+    GAS'EM. SHOOT'EM. TERMINATE'EM.
+    What kind of company is this where local calls cost
+    money?!?
+
+|CNew Jersey Bell
+    You're even worse than German Telecom. Shame on you !
+    Putting me on hold for 20 mins and then FORGETTING ME !
+
+|CFox Network, Channel Five
+    They made the "Married.. With Children" cult show. Worship
+    them ! Worship Kelly Bundy !
+
+|CThe Cyberpunk Liberation Front
+    Your MÅllermilch order will be processed, but first you'll
+    have to hand me over some bux ! Hehehe....anyone has an idea
+    to send milk products over the big lake ? Maybe we could freeze
+    the stuff before mailing it hîhî...
+
+|CSam Bhimji (sbhimji@ersys.edmonton.ab.ca)
+    No SGVA user interface this time, sorry... But when I find a
+    function that would work better in SVGA mode, I promise you,
+    I'll use it okay ??
+
+|CBrendi of CLF
+    Get out of the house, dammit !
+
+|CVistor of CLF
+    Get off your wife, dammit !
+
+|CPapa C of CLF
+    Burn your Amiga, dammit !
+
+|CAll that came to the Sargnagel Meeting
+    Cool Party, Cool People, but cool location, cool food ? Haha....
+    Hope to see more PC people on the next meeting...
+
+|CZag of TDD
+    |Y--> Same as for Papa C AND Vistor !
+
+.END
+.TOPIC Resources
+.SUBTITLE "what it takes to be 3l33+"
+
+|CPhysical Resources
+
+         |C-|c 217 boxes of cigarettes
+         |C-|c 83 litres of world famous MÅllerMilch, Banana Taste
+         |C-|c 24 litres of plain milk
+         |C-|c 27 litres of Aldi's Multivitamin-DiÑt-12-Fruchtnektar
+         |C-|c 145 bottles/cans of The Real Thing (TM)
+         |C-|c 7 bottles of The Real Thing (TM) lite
+         |C-|c a lot of hash brownies
+         |C-|c at least 760,-- US$ on phone bills
+         |C-|c more than $600 on Pizza Home Delivery (Joey's)
+         |C-|c 73 AT&T calling cards
+         |C-|c 536 shows of Married with Children and Who's The Boss
+         |C-|c 43 shows of Fresh Prince of Bel Air
+         |C-|c and, finally, a 386-40 8meg with 530meg HDD and SB/16+SVGA,
+           a Philips 102-key soft-keyboard, a 2001 canadian keyboard and
+           a GENIUS 4-year-old shoplifted 3-button mouse.
+
+|CAudio kicks
+
+  Onyx               "|CBACDAFUCUP|c"
+  King Tee           "|CTha Triflin Album|c"
+  Fu-Schnickens      "|CDont Take It Personal|c"
+  DTF                "|CFrom A Smooth Point Of View|c"
+  Advanced Chemistry "|CFremd im eigenen Land|c"
+  Advanced Chemistry "|CWelcher Pfad fÅhrt zur Geschichte|c"
+  HIJACK             |CCompilation on Tape
+  Billy Idol         "|CCyberpunk"
+  OD & Lord Dis'ment "|CPartyline Harassment Horror II|c" |CDAT TAPE
+
+|CSoftware
+
+  Turbo Pascal 6.0                 "|CPascal is LAME you say?|c" |C(BLAM!)
+  Bingo Editor 3.00                "|CWhat the FUCK is that?|c"
+  HelpPC 2.11                      "|CWhat does INT 19h do?|c"
+  PKLite 1.03                      "|CQuality, not quantity|c"
+  TheDRAW 4.61                     "|COptic is 50%, Tits are the other half|c"
+  SYS6a                            "|CHow can you go faster?|c"
+  Turbo Debugger 2.5               "|CWhen a flyslap is not enuff|c"
+  PKZip 2.04g                      "|CA WareZz DoODzZ DaIlY DeZiRe|c"
+
+|CMotivation
+
+  Mortal Kombat
+  Cool Spot
+  Monsters
+
+...and, the most important thing: Tons of lamers to make fun of!
+
+.END
+.TOPIC The Coding
+.SUBTITLE About the Coding and Source Code
+
+
+Source files used:
+
+Turbo Pascal  Version 6.0  Copyright (c) 1983,90 Borland International
+SOURCE\TYPES.PAS(33)
+SOURCE\INC\BBP_LOGO.INC(287)
+SOURCE\INC\BBP_BART.INC(287)
+SOURCE\INC\BBP_RBOX.INC(42)
+SOURCE\INC\BBP_CTLK.INC(287)
+SOURCE\INC\BBP_STOP.INC(287)
+SOURCE\BBP_VARS(252)
+SOURCE\VIDEO.PAS(35)
+SOURCE\OPTIMER.PAS(110)
+SOURCE\BBUNIT.PAS(107)
+SOURCE\FERROR.PAS(28)
+SOURCE\VGAGRAPH.PAS(99)
+SOURCE\GRWINS.PAS(101)
+SOURCE\BITMANI.PAS(87)
+SOURCE\MOUSEIO.PAS(118)
+SOURCE\EXTRAS.PAS(926)
+SOURCE\PDIAL.PAS(161)
+SOURCE\LSCOMM.PAS(704)
+SOURCE\GRMENUS.PAS(131)
+SOURCE\EDITROUT.PAS(266)
+SOURCE\BBP_PROC.PAS(664)
+SOURCE\SBVOICE.PAS(285)
+SOURCE\BBP_POM.PAS(1622)
+SOURCE\BBP_BSLI.PAS(142)
+SOURCE\BBP_INIT.PAS(485)
+SOURCE\BBP_SET.PAS(908)
+SOURCE\BBP_TOOL.PAS(351)
+SOURCE\BBP_INFO.PAS(238)
+SOURCE\BLUEBEEP.PAS(41)
+9084 lines, 10.8 seconds, 108752 bytes code, 53896 bytes data.
+
+So we are pretty close to hit the 10,000 lines barrier...
+
+.END
+.TOPIC Frequencies
+.SUBTITLE The technical aspect, or "whats that noise?"
+
+Okay, when you are not clear how a "trunk" is set up, you should read
+on here. Well, it's rather simple. You have 5 values in each line, these
+are:
+|C           Freq-1  Freq-2  Freq-3  Lenght  Delay
+            |d(|BHz|d)    (|BHz|d)    (|BHz|d)    (|Bms|d)    (|Bms|d)
+
+Freq1-3 will be overlaid (played at the same time) for a length of "Len"
+milliseconds, followed by a pause (silence) of "Delay" milliseconds.
+After this is done, it will proceed to the next line. If the next line is
+empty, it's done, got it ?
+
+With the dial sets, its just the same. It plays Freq1+2+3 for Len mili-
+seconds, and then delays for the time you have set as the "dial speed"
+in Action Mode.  The dial speed can be modified by pressing Cursor Left
+and Right in Action Mode.
+
+The Frequencies are generated through the FM chipset on your adlib
+compatible sound card, again, the credits for the adlib frequency output
+goes to Urmel.  There are no program-internal sinus tables, like in Blue
+Dial, that just slow down all the shit stuff, the frequency generation
+is handled 100% by the adlib sound card.
+
+Compatible cards that will also work are:
+
+- |CAdLib
+- |CAdLib Gold
+- |Call SoundBlaster and SoundBlaster Pro/Pro16 models
+- |CAudioBlaster, all models
+
+Thats it! I don't think that this is a big deal because adlib cards can
+be bought for |C$20|c, and you should buy one real quick.
+
+I personal like the SB/16 ASP most. 44k, Stereo, and feature-packed.
+
+.END
+.TOPIC Usage
+.SUBTITLE How to use this shit, keys, hints, etc.
+
+Most of the functions are self-explaining for a real phreak, so
+you should find out the most stuff yourself without having any
+trouble. Watch the bottom line of the screen while wandering
+through the menus, some useful information is often displayed there.
+
+The |CDialTranslation|c feature should be also known; it works like
+in BlueDial (Great Job, Casanova!). Just put a %x to put part x
+of the number in, &x for part x to the end of the number. All
+characters will be passed on as-is; spaces will be ignored.
+
+So far for that. Now for the keys. Try it all out, and memorize
+them carefully, because I did not waste much time putting online
+help into the program. For example, in Action Mode only 10% of the
+available features are acutally displayed on screen. Just read on.
+
+In |CAction Mode|c, use the following keys:
+
+|B  0|b..|B1|c                for digits
+|B  A|b..|BH|c                for operator codes
+|B  +|c                   for trunk
+|B  ENTER|c               for current number
+|B  F1|c                  to load new trunk, edit trunks in SETUP menu
+|B  F2|c                  to load new dial set, edit dialsets in SETUP menu
+|B  F5|c                  to take the hardware device off/onhook
+|B  F6|c                  to switch play/record mode on hardware device
+|B  F7|c                  to switch phone on/off on
+|B  F8|c                  to hangup everything if you have device & phone
+|B  F10|c                 for QUICK EXIT (to your terminal program maybe)
+|B  CurLft/Rt|c           to change dial speed
+|B  CurUp/Dn|c            to select a new number
+|B  ESC|c                 to return to the main menu
+|B  SPACE|c               to edit the current phone number
+|B  Del|c                 to delete the current phone number
+|B  P|c                   to pulse-dial the current phone number
+|B  S|c                   to see debug status info
+|B  ALT-M|c               to toggle device play/rec auto switching
+|B  ALT-W|c               to see the World Time (set correct timezone 1st!)
+|B  W|c                   to say "Please Wait", I found this to be useful
+|B  Q|c                   to record quick sample
+|B  R|c                   to replay quick sample
+|B  M|c                   to modem-dial the current number
+|B  ALT-S|c               to sort the phone book alphabetically
+
+
+In |CScanning Mode|c, the stuff is sent in the following format:
+
+|CBEFORESTRING|c+|CSCANSTUFF|c+|CAFTERSTRING
+
+Got it ? If you turn AutoIncrease ON, the scanner will raise
+the scan by one every time you press ENTER, if not, you will
+have to do this yourself by pressing Cursor Up/Down.
+
+In |CCardTalker Mode|c, use the following keys:
+
+|B  F1|c     talks " I would like to make a call using my AT&T calling card "
+|B  F2|c     talks " I would like to make a call using my MCI calling card "
+|B  F3|c     talks " I would like to make a call using my Sprint Phonecard "
+|B  F4|c     talks " The number I'm calling is "
+|B  F5|c     talks the card number you can edit with F9
+|B  F6|c     talks the fone number you can edit with F10
+|B  F7|c     talks " I would like to place this call collect. "
+|B  F8|c     talks " You're nothing more than a bucket of boiling shit! "
+|B  F9|c     edits the current card number that's sent by pressing F5
+|B  F10|c    edits the current fone number that's sent by pressing F6
+|B  ESC|c    leaves CardTalker Mode
+
+In |CFrequency Tester|c, use the following keys:
+
+|B  1-5, Q-T       |cModify Clear Forward
+|B  A-F, Y-V       |cModify Seize
+|B  F1-F4          |cSet Step Rate to 1, 3, 5 and 20 Hz
+|B  F5             |cPlay trunk that is current in Action Mode
+|B  F6             |cSaves current settings into a selectable trunk
+|B  F7             |cOn-The-Fly modification of whole break sequence
+|B  F8             |cReset Trunk to "normal" trunk
+|B  F9             |cZero Out Clear Forward
+|B  F10            |cZero Out Seize
+|B  Space          |cEdit Quick Test Number
+|B  Enter          |cSend Quick Test Number
+
+In |CTerminal mode|c, use the following keys:
+
+|B  ALT-E          |cToggle local echo
+|B  ALT-H          |cHangup the modem (DTR drop)
+|B  ALT-L          |cOpen or close a log file
+|B  ALT-X          |cExit
+|B  ALT-Z          |clittle help screen
+
+
+.END
+.TOPIC File List
+.SUBTITLE The files in the BlueBEEP distribution archive
+
+  BLUEBEEP.EXE        Main Program
+  PLAINDOC.EXE        Converts the documentation into plain ASCII,
+                      so you can print it out or mail it or read it
+                      with your favourite text file lister
+  BLUEBEEP.PBK      |R*|c Phone Book
+  BLUEBEEP.TRK      |R*|c Trunk file
+  BLUEBEEP.SET      |R*|c Dial sets
+  BLUEBEEP.CFG      |R*|c Config file
+  BLUEBEEP.SCN      |R*|c Scanning file
+  BLUEBEEP.RBX      |R*|c Red Box file
+  BLUEBEEP.FQT      |R*|c Frequency Test file
+  BLUEBEEP.PLS      |R*|c Pulse Dialing file
+  BLUEBEEP.DTL      |R*|c Dial Translation file
+  BLUEBEEP.DOC        You are just reading it..
+  BLUEBEEP.WLS        WordList for Word for Number finder
+  CMINSOON.DOC        What is coming soon in BlueBEEP ?
+  SYSOPNFO.DOC        Information for Bulletin Board SysOps
+  CT-VOICE.DRV        Driver for VOC sample output
+  *.VOC               Various VOC files for the CardTalker
+
+Files flagged with "|R*|c" will be created if they don't exist.
+
+.END
+.TOPIC The Mouse
+.SUBTITLE Stories about squeaky, gross things
+
+Just Left-Click an menu item to open it.
+Right-Click to close a menu, the right mouse button does almost the
+same as the ESC key.
+
+In Action mode, you can use the mouse to leftclick the numbers and
+special keys to sound the tones, just like pressing the key itself.
+If you want to click at function keys, click the function key number
+in brackets.  You can also select new numbers by clicking at them.
+Clicking the [Scroll Up] and [Scroll Down] buttons on the bottom of
+the screen lets you scroll through the numbers. If you click at the
+[CR] sign the current number is automatically dialed, just like the
+key would do itself. To quit, either click the right mouse button
+or click at the [ESC] sign in the bottom line of the screen.
+
+In CardTalker mode, the mouse movement is locked to the function box,
+just click on the line of the function you wish to use, or rightclick
+to exit.
+
+In this document reader, use the Left & Right buttons to scroll up and
+down in the text. To quit reading, press both buttons at once.
+
+By the way, I programmed the whole user interface myself, I used nothing
+like toolboxes, or third-party TPUs. Everything and everything except the
+adlib sound routines are my work, so if you encounter bugs with the user
+interface tell me and it will be fixed. If you are a programmer and want
+to use my user interface or parts of it, send me a mail.
+
+.END
+.TOPIC Parameters
+.SUBTITLE Command Line Parameters
+
+BlueBEEP offers several command line parameters to make things easier.
+Here is a detailed list:
+
+ |B/?            |cShows avaiable command line parameters
+ |B/(C)          |cDisplays source code information
+ |B/A            |cStarts the program in Action Mode
+ |B/S            |cStarts the program in Scanning Mode
+ |B/R            |cStarts the program in Red Box Mode
+ |B/T            |cStarts the program in CardTalker Mode
+ |B/F            |cStarts the program in Frequency Tester Mode
+ |B/C            |cStarts the program in CardChecker Mode *regged only*
+ |B/TERM         |cStarts the program in tiny terminal mode
+ |B/NOMODEM      |cDisables the modem usage, overrides the config
+ |B/NOMOUSE      |cDisables mouse usage, even if a mouse is present
+ |B/DEBUG        |cDisplays some debugging info
+ |B/EXEC <fn>    |cExecutes BSLI script file <fn>
+
+That's it so far. You cannot combine /A, /S, /R, /T, /F, /C and /TERM.
+The options /NOMOUSE and /NOMODEM can be combined with any other command
+line parameters.
+
+You cannot combine /NOMODEM and /TERM, you idiot !
+
+Note that you cannot use parameters when you have the password
+protection on; this is a security feature.
+
+.END
+.TOPIC The hardware
+.SUBTITLE The BlueBEEP Pulse Dialing Hardware
+
+From now, you can pulse dial with BlueBEEP, send the tones
+DIRECTLY into the phone line, and many more. You can
+powerdial at speeds never seen before...sounds k-rad huh?
+
+All you need is a little piece of hardware that you have to
+connect to your parallel port (printer port) and to your joy-
+stick port (that's where it gets that 5V+ power that it needs
+to operate). Then plug it into the blaster and the phone line..
+
+If you are an elite phreaker and interested in that device,
+email me for an assembly instruction or a ready-to-plug
+device.
+
+For all people that already have one, one quick note.
+The german phone system can handle up to 35/30/300 timings,
+but the TELEKOM will probably notice that you are powerdialing
+and kick your ass, so use the defaults (50/50/500).
+
+When pulse dialing, |C1-9|c are 1-9 tacks,
+                    |C0|c    is 10 tacks,
+                    |CA|c    is 11 tacks,
+                    |CB|c    is 12 tacks,
+                    |CC|c    is 13 tacks,
+                    |CD|c    is 14 tacks,
+                    |CE|c    is 15 tacks,
+                    |CF|c    is 16 tacks,
+                    |CG|c    is 17 tacks and
+                    |CH|c    is 18 tacks.
+
+You can use tacks over 10 to access the military phone system.
+By the way, holding down the "O" button and listening to the
+clicking relays is fun, but will fuck up your relays with the time.
+
+For the HOOK relay we recommend you to use a high-quality relay,
+because this is the most-used part in the device.
+
+A soldering plan for the device is under development and will be
+published in one of the next releases.
+
+If you are into electronics and soldering, then you could just make
+a little device with some relais on it. You should make Relay 0 control
+the hook switch, Relay 1 control the play/rec condition of the phone
+line transmitter, and let toggle relay 2 the phone/device switch.
+You can then connect the device to any serial port and set it up in
+the Setup/Pulse Dialing menu.
+
+By the way, we have another cool device in development that can detect
+incoming touch-tones as well. Means, you can use BlueBEEP as your ans-
+werring machine, or as your own voice mail system. Killer? Killer!
+
+For further information send Electronic Mail.
+
+.END
+.TOPIC Credits
+.SUBTITLE The Master of Code and his footcroud
+
+            Coding: |COnkel Dittmeyer
+     Ansi Graphics: |COnkel Dittmeyer and ACiD Productions
+       AdLib Sound: |CUrmel / ZZC
+ Card Talker Voice: |CBrendi / CLF
+       Bug Reports: |CLucifer, Daryl, Mat/Razor 1911, Vistor/CLF
+       Suggestions: |CMarcus, Low Cyl, Lucifer, Vistor, Tr8or
+     Moral Support: |CSusanne, Maike, Britta, Johanna, Brendi,
+                    |CKerstin, Katharina and Evonne.
+
+     Other sources: |CPhrack
+                    |C2600 Magazine
+                    |CHack-Tic
+                    |CDemon Dialer User Reference Manual
+                    |CPC-Intern
+                    |C#phreak
+                    |C#hack
+                    |CAmerican Telephone & Telegraph
+                    |CMicrowave Communications, Inc.
+                    |CTELEKOM
+                    |Ccomp.lang.pascal
+
+.END
+.TOPIC Registering
+.SUBTITLE How to register BlueBEEP, the Price of RaDNeSs
+
+|CBlueBEEP is free.
+
+You do not need to register BlueBEEP. This is PD, Freeware, however,
+you are not forced to pay money for this or give your first-born
+child to the author.
+
+Anyway, this cost me a lot of work, time and money. So if you would
+like to donate me any money, hardware, software, pizza, free T-shirts,
+bumper stickers, k0deZ, rubber ducks, Stephen King books, CD's,
+cigarettes, joints, ripped-off baby heads, Yodel-Andys Yodel-Blues,
+The Guide to Bake Poatos on a Stik!, or something like that,
+please send email.
+
+The adress: |Conkeld@ponton.hanse.de
+
+Do not hestiate to write this down, it will be shown again when you
+quit the program.
+
+.END
+.TOPIC Disclaimer
+.SUBTITLE If the feds kick down your door, dont blame me.
+
+|CCopyright info
+  BlueBEEP (R) (TM), further be referenced as BBP, is property
+  of Onkel Dittmeyer. You may freely distribute and pass around
+  this program, as long it is not modified, crippled, or somehow
+  manipulated. You are not allowed to disassemble or reverse-en-
+  gineer this software, as I would personally walk over to your
+  house and firebomb the childrens bedroom. Seen that on TV ?
+
+  If you would like some parts of the source code in order to
+  study it, send me an email message, and we will work something
+  out..
+
+|CLegal Disclaimer
+
+  FIRST: THE AUTHOR DOES |CNOT ENCOURAGE YOU|c TO USE THIS
+         PROGRAM FOR ANY ACTIVITIES IN VIOLATION OF LOCAL
+         LAWS. KEEP THAT IN MIND.
+
+  THE AUTHOR IS NOT RESPONSIBLE FOR ANY DAMAGE DONE THROUGH
+  OR ANY |CCRIME|c COMMITED BY USING THIS PROGRAM. THIS PROGRAM
+  IS FOR EDUCATIONAL PURPOSES OR INDOOR PHONE SYSTEMS ONLY.
+  THE AUTHOR IS NOT RESPONSIBLE FOR ANY LOSSES APPEARING BY
+  THE USAGE OF THIS SOFTWARE, LIKE LOSS OF DATA, LOSS OF
+  MONEY, LOSS OF TIME, LOSS OF SEX ATTRACTION OR ANY OTHER
+  LOSSES. THE AUTHOR REMINDS YOU THAT THE MISUSE OF CCITT #5
+  INTERNATIONAL SIGNALLING IS A |CCRIME|c AND WILL BE PUNISHED
+  WITH MORE THAT 3 YEARS OF |CJAIL|c IN THE MOST COUNTRIES.
+  THE AUTHOR ALSO REMINDS YOU THAT THE HACKING AND USING OF
+  PRIVATE BRANCH EXCHANGES (SO-CALLED PBXES) IS ALSO A |cCRIME|c
+  AND WILL ALSO PUNISHED WITH |CFINES|c OR |CJAIL|c. THE AUTHOR ALSO
+  REMINDS YOU THAT CALLING CARD FRAUD IS A MAJOR |CCRIME|c AS
+  WELL.
+
+  IN SHORT WORDS: I GIVE A PHUCK WHAT YOU DO WITH THIS PROGRAM,
+                  BUT IF THE |CFEDS|c ARE KNOCKING AT YOUR DOOR,
+                  CLAIMING THAT YOU KILLED JFK & MLK, YOUR VISA
+                  IS MAXED OUT, YOUR PHONE AND ELECTRICITY LINES
+                  ARE DISCONNECTED, ITS NOT MY PHAULT, COMPRENDES ??
+
+But who really gives a fuck. Live's short. Rave hard.
+
+.END
+.TOPIC Support
+.SUBTITLE Support sites, hotlines, 800-numbers
+
+If you have Internet Access send Email to |Conkeld@ponton.hanse.de
+If you already sent email to me, and didnt get answer, please send
+it again because I screwed up the email adress in the last version
+
+|CI will answer ALL mails personally and immediately.
+
+If you do not like this software, send your words to |C/dev/null|c.
+
+My PGP public key is included into the ZIP as ODPGPKEY.ASC
+if you want to send me encrypted messages and/or files, which is
+preferred. If you send stuff unencrypted, that's a point on the lame scale!
+
+|b  ⁄ƒÕÕÕ|BÌÔKÓú|bÕ|BDå≈≈MÓòÓÁ|bÕÕÕƒø
+|b  ¿ƒƒƒƒƒƒƒƒƒƒƒƒ|B≥≥|bƒƒƒƒƒƒƒƒƒŸ
+
+|b           (|BAuthor|b)
+.END
+.TOPIC Script Language
+.SUBTITLE Instructions on the BlueBEEP Script Language (BSLI)
+|dƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+|C The BSLI Script Language
+|dƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+
+BSLI is BlueBEEP's script language, that means that it is a tiny pro-
+gramming language that can access all major functions of BlueBEEP just
+by typing a little text. It is very powerful, or at least: It WILL become
+powerful, after it was thrown back due to the big crash, and I was lacking
+the time to finish it till HoHoCon.
+
+Okay. Lets talk about the script format. Each command is a line of text.
+Each blank line or a line starting with a |C;|c symbol will be ignored,
+just like it wouldn't be there. Each other line is interpreted as code.
+
+To run a BSLI script, call one of this commands:
+
+        |CBSLI |B<scriptname>
+        |CBLUEBEEP EXEC |B<scriptname>
+
+where |B<scriptname>|c is the file name of the script you want to execute.
+The BSLI.EXE is much smaller and handy if you want to give your scripts
+away without the person having the full BlueBEEP at their hands.
+
+|CCommands
+
+Valid commands for the scripts are:
+
+|CCLEAR_SCREEN
+  This will clear the screen and put the cursor in the top left position.
+
+|CWRITE |B<text>
+  This will write the string |B<text> |con screen.
+
+|CWRITELN |B<text>
+  This will write the string |B<text> |con screen and proceed to the
+  next line.
+
+|CDIAL |B<number>
+  This will dial the number |B<number> |cwithout any dial translation
+  appearing to it, regardless to the DTL_Ineffect value. Valid characters
+  in the number are 0123456789ACBDEFGH, other characters will just be
+  ignored. Dialing will occur using the current dial set and -speed.
+
+|CDELAY |B<miliseconds>
+  This will halt (delay) the computer for the given time of
+  |B<miliseconds>|c, eg. DELAY 5000 would wait 5 seconds and proceed
+  with the next line in the script.
+
+|CCHANGE_DIALSET |B<dialsetname>
+  This will change the current dialset to |B<dialsetname>|c by loading
+  the corresponding dial set from BLUEBEEP.SET and activating it. For
+  example if you put DTMF after it it would switch BlueBEEP into touch
+  tone mode. This is not case sensitive. Selecting an nonexisting dial
+  set will result in a fatal error and cancellation of the script.
+
+|CCHANGE_TRUNK |B<trunkname>
+  This will change the current trunk (break tone) to |B<trunkname>|c.
+  Almost the same as CHANGE_DIALSET.
+
+|CFAST_EXIT
+  This will exit the script to DOS at once. Almost the same as pressing
+  F10 while in Action Mode.
+
+|CWAIT_ENTER
+  This will wait for the ENTER key to be pressed. No text will be
+  displayed. If you want to notify the user of your actions first,
+  be sure to put a WRITE statement in the above line.
+
+|CPLAY_TRUNK
+  This will play the currently loaded trunk; same as hitting |C+|c.
+  Note that the last used trunk will be saved on exit and loaded as
+  default when you run either BlueBEEP or BSLI.
+
+|CMODEM_DIAL |B<number>
+  This will dial the |B<number> |con the modem, corresponding to the
+  current modem settings (pulse/tone) and the presence of a modem.
+  You do NOT have to specify anything like ATDT; BSLI will do it auto-
+  magically.
+
+|CMODEM_DROP_DTR
+  This will drop the DTR on the modem line and will abort any dialing
+  in progress.
+
+|CMODEM_RAISE_DTR
+  This will raise the DTR on the modem line.
+
+|CSEND_TONE |B<f1> <f2> <f3> <length>
+  This will send tone |B<f1>,<f2>,<f3> |cfor |B<length> |cmiliseconds,
+  if you need delay between the tones, take advantage of the |CDELAY
+  routine.
+
+That's it so far! I am currently working on variables and new commands,
+so you can be sure that you get something to play with when I release
+the soon-to-come BlueBEEP V0.08 in the next couple of weeks!
+
+Enjoy!
+.END
+.ENDDOC
